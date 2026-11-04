@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="株式会社petoccoは、ペットとの毎日に小さなワクワクを届ける架空のペットブランドです。">
+<title>petocco｜毎日に、ちいさな「おいしい！」を。</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{--ink:#34343b;--cream:#fffdf8;--pink:#f0b9bc;--yellow:#fab044;--green:#b1b56d;--blue:#96c1c9;--orange:#fa8a44;--purple:#d74053}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Nunito','Kiwi Maru',sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+.topbar{background:var(--ink);color:#fff;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.12em}
+header{position:sticky;top:0;z-index:20;background:#fffaf0ed;backdrop-filter:blur(12px);border-bottom:1px solid #eee5d5}
+.nav{max-width:1160px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:8px;font-size:29px;font-weight:900;letter-spacing:.04em;color:var(--ink)}.logo-word{line-height:1}.logo-word .paw{color:#fa8a44}.brand-mark{width:53px;height:38px;display:block}
+.navlinks{display:flex;gap:27px;font-size:13px;font-weight:800}.navlinks a:hover{color:#d74053}
+.menu{display:none;border:0;background:var(--yellow);border-radius:50%;width:42px;height:42px;font-size:20px}
+.hero{max-width:1160px;margin:0 auto;padding:58px 24px 74px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:30px;min-height:570px}
+.eyebrow{display:inline-block;background:var(--green);padding:8px 15px;border-radius:30px;font-size:12px;font-weight:900;letter-spacing:.08em;transform:rotate(-2deg)}
+h1{font-family:'Kiwi Maru',sans-serif;font-size:clamp(42px,6vw,76px);line-height:1.22;letter-spacing:-.06em;margin:22px 0 18px}
+h1 .pop{color:#d74053;display:inline-block;position:relative}h1 .pop:after{content:"";position:absolute;left:0;right:0;bottom:2px;height:9px;background:var(--yellow);z-index:-1;border-radius:9px}
+.lead{font-size:16px;line-height:2;color:#666;max-width:440px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 23px;border-radius:999px;font-weight:900;font-size:14px;transition:.2s;box-shadow:0 5px 0 #00000012}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 0 #00000012}.primary{background:var(--pink)}.secondary{background:#fff;border:2px solid #eee3d4}
+.hero-art{position:relative;min-height:430px;display:grid;place-items:center}
+.blob{position:absolute;width:min(92%,490px);aspect-ratio:1;border-radius:48% 52% 44% 56%/51% 43% 57% 49%;background:var(--yellow);transform:rotate(-8deg)}
+.pet-card{position:relative;width:min(92%,490px);height:390px;background:#fff;border:8px solid white;border-radius:34px;box-shadow:0 18px 45px #8b704522;transform:rotate(2deg);overflow:hidden}.pet-card img{width:100%;height:100%;object-fit:cover;display:block}.pet-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#27312655,transparent 48%);pointer-events:none}
+.sticker{position:absolute;z-index:3;border:3px solid white;border-radius:50%;width:96px;height:96px;display:grid;place-items:center;text-align:center;font-weight:900;font-size:13px;line-height:1.2;box-shadow:0 5px 15px #0002}.s1{background:var(--blue);top:25px;right:2px;transform:rotate(12deg)}.s2{background:var(--green);bottom:22px;left:0;transform:rotate(-12deg)}
+.spark{position:absolute;font-size:42px;color:#fa8a44}.sp1{top:15px;left:8%}.sp2{bottom:12px;right:8%;color:#7dbd80}
+.marquee{background:var(--blue);color:var(--ink);padding:13px 0;overflow:hidden;white-space:nowrap;font-weight:900;letter-spacing:.12em;font-size:15px}
+.marquee div{display:inline-block;animation:move 24s linear infinite}@keyframes move{to{transform:translateX(-50%)}}
+section{padding:88px 24px}.wrap{max-width:1100px;margin:auto}.section-head{text-align:center;margin-bottom:42px}.kicker{font-size:12px;font-weight:900;letter-spacing:.18em;color:#d74053}.section-head h2{font-family:'Kiwi Maru',sans-serif;font-size:clamp(30px,4vw,44px);margin:10px 0}.section-head p{color:#777;line-height:1.9;margin:0}
+.about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-visual{min-height:360px;background:var(--blue);border-radius:34px;display:block;position:relative;overflow:hidden;box-shadow:0 15px 35px #6e76651c}.about-visual img{width:100%;height:360px;object-fit:cover;display:block}.about-visual .emoji{display:none}.about-visual .mini{position:absolute;background:#fff;padding:14px 19px;border-radius:20px;font-weight:900;box-shadow:0 8px 20px #0001}.mini.one{top:20px;left:10px;transform:rotate(-7deg)}.mini.two{bottom:22px;right:8px;background:var(--yellow);transform:rotate(5deg)}
+.about-copy h3{font-family:'Kiwi Maru';font-size:27px;line-height:1.6;margin:0 0 16px}.about-copy p{line-height:2;color:#696969;font-size:14px}.values{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.palette-dots{display:flex;gap:9px;margin-top:22px}.palette-dots i{display:block;width:25px;height:25px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px #0002}.pill{padding:9px 14px;border-radius:99px;font-size:12px;font-weight:900}.pill:nth-child(1){background:#ffe0e6}.pill:nth-child(2){background:#e2f2df}.pill:nth-child(3){background:#fff0c7}
+.products{background:#fff4e4}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product{background:#fff;border-radius:28px;padding:16px;box-shadow:0 8px 25px #795e3210;transition:.2s}.product:hover{transform:translateY(-6px)}
+.product-art{height:220px;border-radius:21px;display:grid;place-items:center;position:relative;overflow:hidden}.product:nth-child(1) .product-art{background:#f0b9bc}.product:nth-child(2) .product-art{background:#b1b56d}.product:nth-child(3) .product-art{background:#96c1c9}
+.pack{width:125px;height:160px;border:4px solid #fff;border-radius:18px 18px 24px 24px;box-shadow:0 10px 20px #0002;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-4deg);color:#51434a;font-weight:900;position:relative}.pack:before{content:"";position:absolute;top:8px;left:12px;right:12px;height:7px;border-radius:10px;background:#ffffff9c}.product:nth-child(1) .pack{background:#f0b9bc}.product:nth-child(2) .pack{background:#b1b56d;transform:rotate(4deg)}.product:nth-child(3) .pack{background:#96c1c9;transform:rotate(-2deg)}.pack b{font-size:22px}.pack small{font-size:10px;letter-spacing:.1em}.pack em{font-style:normal;font-size:28px;margin:5px}
+.product-tag{position:absolute;top:13px;left:13px;background:#fff;border-radius:99px;padding:7px 11px;font-size:10px;font-weight:900}.product h3{margin:17px 4px 5px;font-size:19px}.product p{margin:0 4px 13px;color:#777;font-size:12px;line-height:1.7}.details{font-size:12px;font-weight:900;color:#d74053;margin:0 4px 6px}
+.promise{background:#b1b56d}.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.promise-card{background:#ffffffb8;border-radius:25px;padding:28px 22px;text-align:center}.promise-card .icon{font-size:42px}.promise-card h3{font-family:'Kiwi Maru';font-size:18px;margin:13px 0 8px}.promise-card p{font-size:13px;line-height:1.8;color:#626b60;margin:0}
+.company{background:#fff}.company-table{max-width:760px;margin:auto;border-top:1px solid #eadfce}.company-row{display:grid;grid-template-columns:170px 1fr;padding:19px 22px;border-bottom:1px solid #eadfce;font-size:14px;line-height:1.8}.company-row strong{font-weight:900}
+.contact{background:#f8e9df;text-align:center}.contact .section-head p{color:#514b5e}.contact-box{max-width:700px;margin:auto;background:#fff;border-radius:28px;padding:32px 24px}.contact-box p{line-height:1.9;color:#777;font-size:14px}.contact-box .btn{background:var(--yellow);border:0;cursor:pointer}
+footer{background:var(--ink);color:#fff;padding:35px 24px}.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-logo{font-size:28px;font-weight:900;display:flex;align-items:center;gap:9px}.footer-logo .brand-mark{width:48px;height:34px}.footer-logo .paw{color:#fa8a44}footer small{color:#c7c4c4}
+.note{font-size:11px;color:#8b8175;text-align:center;margin-top:18px}
+@media(max-width:760px){.nav{padding:12px 18px}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);padding:20px;flex-direction:column;gap:18px;text-align:center;border-bottom:1px solid #eee}.navlinks.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:42px;gap:5px;text-align:center}.hero .lead{margin:auto}.ctas{justify-content:center}.hero-art{min-height:350px}.pet-card{height:300px}.dog{font-size:135px}.about-grid{grid-template-columns:1fr;gap:35px}.about-visual{min-height:280px}.product-grid{grid-template-columns:1fr;max-width:420px;margin:auto}.product-art{height:230px}.promise-grid{grid-template-columns:1fr}.company-row{grid-template-columns:105px 1fr;padding:16px 10px}.footer-inner{flex-direction:column;text-align:center}section{padding:68px 20px}}
+</style>
+</head>
+<body>
+<div class="topbar">HELLO, petocco!　🐾　ペットと人の、心地よい毎日を。</div>
+<header><nav class="nav"><a class="logo" href="#top">
+  <img src="petocco-logo.png" alt="petocco ロゴ" style="width:180px; height:auto;">
+</a>
+<div class="navlinks" id="navlinks"><a href="#about">ABOUT</a><a href="#products">PRODUCTS</a><a href="#promise">OUR PROMISE</a><a href="#company">COMPANY</a><a href="#contact">CONTACT</a></div><button class="menu" aria-label="メニュー" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button></nav></header>
+<main id="top">
+<section class="hero">
+<div><span class="eyebrow">WELCOME TO petocco!</span><h1>いっしょに過ごす<br><span class="pop">毎日</span>を、<br>もっと心地よく。</h1><p class="lead">うれしい日も、なんでもない日も。<br>大切な家族と過ごす時間が、もっと心地よくなるように。<br>petoccoはペットと人の暮らしに寄り添います。</p><div class="ctas"><a class="btn primary" href="#products">商品を見てみる <span>→</span></a><a class="btn secondary" href="#about">petoccoについて</a></div></div>
+<div class="hero-art"><div class="blob"></div><div class="pet-card"><img src="https://images.pexels.com/photos/32679473/pexels-photo-32679473/free-photo-of-golden-retriever-dog-portrait-outdoors.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="自然光の中でこちらを見るゴールデンレトリバー"><div class="sticker s1">HAPPY<br>SNACK!</div><div class="sticker s2">LOVE<br>YOUR PET</div></div><span class="spark sp1">✳</span><span class="spark sp2">✦</span></div>
+</section>
+<div class="marquee"><div>　🐾 PET + PEOPLE　✳　LITTLE JOY EVERY DAY　🐾 PET + PEOPLE　✳　LITTLE JOY EVERY DAY　🐾 PET + PEOPLE　✳　LITTLE JOY EVERY DAY　</div></div>
+<section class="about" id="about"><div class="wrap about-grid"><div class="about-visual"><img src="https://images.unsplash.com/photo-1652888616140-ce5ab433c3a5?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=85&amp;w=1400" alt="窓辺でくつろぐキジトラ猫"><span class="mini one">ともに暮らす、家族だから。</span><span class="mini two">SMALL JOY! ✳</span></div><div class="about-copy"><span class="kicker">01 / ABOUT US</span><h3>ペットとの毎日に、<br>「好き」が増えるきっかけを。</h3><p>petoccoは、ペットと暮らす人の気持ちに寄り添い、毎日のコミュニケーションをもっと豊かにするアイデアを届ける会社です。</p><p>おやつを選ぶ時間、いっしょに遊ぶ時間、何気ないいつもの時間。そんな日々のひとコマに、小さな楽しさと笑顔をプラスします。</p><div class="values"><span class="pill">♡ ペット目線</span><span class="pill">✳ 暮らしに寄り添う</span><span class="pill">☀ 毎日にワクワク</span></div><div class="palette-dots" aria-label="petoccoのブランドカラー"><i style="background:#96c1c9"></i><i style="background:#fa8a44"></i><i style="background:#b1b56d"></i><i style="background:#d74053"></i><i style="background:#fab044"></i><i style="background:#f0b9bc"></i></div></div></div>
+<div class="section-head" style="margin:70px auto 28px"><span class="kicker">OUR CONCEPT</span><h2>「いっしょ」が、いちばんうれしい。</h2><p>ペットと人が、同じ毎日を心地よく楽しめること。</p></div>
+<div class="about-copy" style="max-width:850px;margin:auto;text-align:center"><p>私たちが届けたいのは、ものだけではありません。おやつをあげるときの目線、名前を呼んだときのしっぽ、隣で安心して眠る姿。そんな何気ない瞬間が、暮らしを少しあたたかくしてくれると考えています。petoccoは、ペットも飼い主も無理なく自然体で楽しめる商品や体験を通して、家族の毎日に小さな幸せを増やしていきます。</p></div>
+<div class="section-head" style="margin:58px auto 28px"><span class="kicker">OUR POLICY</span><h2>会社として大切にする3つの方針</h2></div>
+<div class="promise-grid" style="max-width:1000px;margin:auto">
+<div class="promise-card"><div class="icon">🐾</div><h3>ペットの安心を第一に</h3><p>かわいさや楽しさだけでなく、ペットの健康と安全に配慮。原材料や使い方をわかりやすく伝え、誠実なものづくりを目指します。</p></div>
+<div class="promise-card"><div class="icon">🌱</div><h3>暮らしにちょうどいい</h3><p>毎日続けやすいこと、選びやすいことを大切に。飼い主の声や日々の気づきを商品づくりに活かします。</p></div>
+<div class="promise-card"><div class="icon"><img src="yorisou.png" alt="寄り添う" style="width: 40px; height: auto;"><h3>まっすぐ、正直に</h3><p>商品の特徴や情報を誠実に伝え、いただいた声に向き合います。ペットと人、地域や社会とのつながりも大切にします。</p></div>
+</div></section>
+<section class="products" id="products"><div class="wrap"><div class="section-head"><span class="kicker">02 / OUR PRODUCTS</span><h2>PRODUCTS</h2><p>いつものごはんやおやつ時間を、もっと楽しく。</p></div><div class="product-grid">
+<article class="product"><div class="product-art"><span class="product-tag">PICK UP!</span><img src="https://images.pexels.com/photos/6568942/pexels-photo-6568942.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000" alt="おやつを楽しむ犬" style="width:100%;height:100%;object-fit:cover"></div><h3>トッピングッド</h3><p>いつものごはんに、ちょい足しの楽しさを。毎日の食事時間を彩るペット用トッピングおやつ。</p><div class="details">12g × 20袋（企画イメージ）</div></article>
+<article class="product"><div class="product-art"><span class="product-tag">COMING SOON</span><div class="pack"><small>petocco</small><b>わくわく</b><em>🐟</em><small>DAILY BITES</small></div></div><h3>デイリーバイツ</h3><p>ちょっとしたごほうびに。毎日のコミュニケーションを楽しくするおやつシリーズ。</p><div class="details">商品企画イメージ</div></article>
+<article class="product"><div class="product-art"><span class="product-tag">COMING SOON</span><div class="pack"><small>petocco</small><b>おたのしみ</b><em>🍠</em><small>HAPPY TIME</small></div></div><h3>ハッピータイム</h3><p>特別な日にも、なんでもない日にも。ペットとの時間を彩るアイテムを企画中。</p><div class="details">商品企画イメージ</div></article>
+</div><p class="note">※掲載商品・仕様は架空のブランドサイト用に作成した企画イメージです。実際の販売・品質・原材料を示すものではありません。</p></div></section>
+<section class="promise" id="promise"><div class="wrap"><div class="section-head"><span class="kicker">03 / OUR PROMISE</span><h2>petoccoが大切にすること</h2><p>小さなよろこびを、まっすぐに。</p></div><div class="promise-grid"><div class="promise-card"><div class="icon">🐾</div><h3>ペットの気持ちから</h3><p>ペットにとって心地よいことは何か。いつもその目線を大切に考えます。</p></div><div class="promise-card"><div class="icon">🎨</div><h3>毎日に楽しさを</h3><p>選ぶ時間も、使う時間も。思わず笑顔になるようなアイデアを形にします。</p></div><div class="promise-card"><div class="icon">🤝</div><h3>家族に寄り添う</h3><p>ペットと人、それぞれの暮らしに寄り添うものづくりを目指します。</p></div></div></div></section>
+<section class="company" id="company"><div class="wrap"><div class="section-head"><span class="kicker">04 / COMPANY</span><h2>会社概要</h2><p>petoccoについて</p></div><div class="company-table"><div class="company-row"><strong>会社名</strong><span>株式会社petocco</span></div><div class="company-row"><strong>事業内容</strong><span>ペット関連商品の企画・開発・販売（架空設定）</span></div><div class="company-row"><strong>ブランド</strong><span>petocco / トッピングッド</span></div><div class="company-row"><strong>所在地</strong><span>設定なし（架空の企業サイト）</span></div><div class="company-row"><strong>設立</strong><span>設定なし</span></div></div><p class="note">※株式会社petoccoおよび本サイトの会社情報は、デザイン制作のための架空設定です。</p></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="section-head"><span class="kicker">05 / CONTACT</span><h2>LET'S TALK!</h2><p>petoccoへのお問い合わせはこちら。</p></div><div class="contact-box"><div style="font-size:42px">💌</div><h3 style="font-family:'Kiwi Maru';margin:8px 0">いっしょに、もっと楽しい毎日へ。</h3><p>商品やブランドについてのお問い合わせ窓口を想定したエリアです。<br>このサイトは架空のため、実際の送信機能はありません。</p><a class="btn" href="#top">TOPにもどる ↑</a></div></div></section>
+</main>
+<footer><div class="footer-inner"><div class="footer-logo"><svg class="brand-mark" viewBox="0 0 180 116" role="img" aria-label="petocco ロゴ">
+<path d="M13 43 L90 7 L167 43" fill="none" stroke="#96c1c9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 31 C82 18 65 27 90 48 C115 27 98 18 90 31Z" fill="#fa8a44"/>
+<path d="M25 75 C25 54 39 48 53 54 C62 58 64 68 62 77 C59 92 42 98 31 91 C26 87 25 81 25 75Z" fill="none" stroke="#d74053" stroke-width="4" stroke-linecap="round"/>
+<path d="M115 77 L130 54 L145 77 C151 91 140 100 129 98 C117 97 109 89 115 77Z" fill="none" stroke="#b1b56d" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="47" cy="74" r="3.5" fill="#34343b"/><circle cx="128" cy="78" r="3.5" fill="#34343b"/>
+<path d="M59 73 Q68 67 68 77" fill="none" stroke="#d74053" stroke-width="4" stroke-linecap="round"/>
+<path d="M110 78 Q103 68 98 76" fill="none" stroke="#b1b56d" stroke-width="4" stroke-linecap="round"/>
+</svg><span>pet<span class="paw">o</span>cco</span></div><small>© 2026 petocco. All rights reserved.　｜　FICTIONAL BRAND SITE</small></div></footer>
+<script>document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));</script>
+</body></html>
